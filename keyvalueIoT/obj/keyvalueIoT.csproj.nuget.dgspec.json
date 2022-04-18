@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\bhatt\\Desktop\\keyvalueIoT\\keyvalueIoT.csproj": {}
+    "C:\\Users\\bhatt\\Desktop\\keyvalIOT\\keyvalueIoT\\keyvalueIoT.csproj": {}
   },
   "projects": {
-    "C:\\Users\\bhatt\\Desktop\\keyvalueIoT\\keyvalueIoT.csproj": {
+    "C:\\Users\\bhatt\\Desktop\\keyvalIOT\\keyvalueIoT\\keyvalueIoT.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\bhatt\\Desktop\\keyvalueIoT\\keyvalueIoT.csproj",
+        "projectUniqueName": "C:\\Users\\bhatt\\Desktop\\keyvalIOT\\keyvalueIoT\\keyvalueIoT.csproj",
         "projectName": "keyvalueIoT",
-        "projectPath": "C:\\Users\\bhatt\\Desktop\\keyvalueIoT\\keyvalueIoT.csproj",
+        "projectPath": "C:\\Users\\bhatt\\Desktop\\keyvalIOT\\keyvalueIoT\\keyvalueIoT.csproj",
         "packagesPath": "C:\\Users\\bhatt\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\bhatt\\Desktop\\keyvalueIoT\\obj\\",
+        "outputPath": "C:\\Users\\bhatt\\Desktop\\keyvalIOT\\keyvalueIoT\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

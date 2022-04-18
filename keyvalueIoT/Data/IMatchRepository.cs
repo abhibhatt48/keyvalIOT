@@ -14,7 +14,7 @@ namespace keyvalueIoT.Data
 
         Task<bool> SaveChanges();
 
-        //Get method
+        
         public bool Exist(string key);
 
         Keyvalue GetMatchbykey(string key);

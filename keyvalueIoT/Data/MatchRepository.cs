@@ -20,13 +20,13 @@ namespace keyvalueIoT.Data
 
         public void Add<T>(T entity) where T : class
         {
-            _logger.LogInformation($"Adding an object of type {entity.GetType()} to the context");
+            _logger.LogInformation($"Adding an object {entity.GetType()} to the context");
             _context.Add(entity);
         }
 
         public void Delete(Keyvalue keyvalue)
         {
-            _logger.LogInformation($"Removing the match by {keyvalue.Key} to the context");
+            _logger.LogInformation($"Removing the Keyvalue by {keyvalue.Key} to the context");
             _context.Remove(keyvalue);
         }
 
@@ -37,7 +37,7 @@ namespace keyvalueIoT.Data
 
         public Keyvalue GetMatchbykey(string key)
         {
-            _logger.LogInformation($"Getting match by key");
+            _logger.LogInformation($"Getting keyvalue by key");
             var q = from contxt in _context.KeyItems
                         where contxt.Key == key
                         select contxt;
@@ -47,7 +47,7 @@ namespace keyvalueIoT.Data
 
         public async Task<bool> SaveChanges()
         {
-            _logger.LogInformation($"Attempting to save changes in context");
+            _logger.LogInformation($"Save changes");
             return(await _context.SaveChangesAsync()) > 0;
         }
          

@@ -31,7 +31,7 @@ namespace keyvalueIoT.Controllers
             }
             else
             {
-                return StatusCode(StatusCodes.Status404NotFound, "Specified key absence");
+                return StatusCode(StatusCodes.Status404NotFound, "Key is not here");
             }
         }
 
@@ -41,7 +41,7 @@ namespace keyvalueIoT.Controllers
             var exist = _repository.Exist(keyvalue.Key);
             if (exist)
             {
-                return StatusCode(StatusCodes.Status409Conflict, "Specified Key already exist");
+                return StatusCode(StatusCodes.Status409Conflict, "Key already exist");
             }
             _repository.Add(keyvalue);
             if (await _repository.SaveChanges())
@@ -70,12 +70,12 @@ namespace keyvalueIoT.Controllers
                 }
                 else
                 {
-                    return BadRequest($"Failed to delete {key}");
+                    return BadRequest();
                 }
             }
             else
             {
-                return StatusCode(StatusCodes.Status404NotFound, " Key does not exist");
+                return StatusCode(StatusCodes.Status404NotFound, "Key does not exist");
             }
 
         }
@@ -91,7 +91,7 @@ namespace keyvalueIoT.Controllers
             {
                 return Ok();
             }
-            return StatusCode(StatusCodes.Status404NotFound, "Specified Key already exist");
+            return StatusCode(StatusCodes.Status404NotFound, "Key already exist");
         }
     }          
 }
