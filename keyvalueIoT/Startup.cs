@@ -12,6 +12,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore;
 using keyvalueIoT.Models;
+using keyvalueIoT.Data;
 
 namespace keyvalueIoT
 {
@@ -27,6 +28,10 @@ namespace keyvalueIoT
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+			services.AddDbContext<KeyValueContext>(options =>
+					options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+					
+			services.AddScoped<IMatchRepository,MatchRepository>();
             services.AddDbContext<KeyValueContext>(opt =>
                opt.UseInMemoryDatabase("KeyList"));
             services.AddControllers();
