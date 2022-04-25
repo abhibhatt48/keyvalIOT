@@ -29,7 +29,7 @@ namespace WebApplication1
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<KeyvalueContext>(opts => opts.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddDbContext<KeyvalueContext>(opts => opts.UseSqlServer(Configuration["ConnectionString:KeyValueDB"]));
             services.AddScoped<IDataRepository<Keyvalue>, EmployeeManager>();
             services.AddControllers();
         }

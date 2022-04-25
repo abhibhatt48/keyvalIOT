@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace WebApplication1.Models.Repository
 {
-    interface IDataRepository<TEntity>
+    public interface IDataRepository<TEntity>
     {
         IEnumerable<TEntity> GetAll();
         TEntity Get(string Key);

@@ -10,10 +10,11 @@ using WebApplication1.Models.Repository;
 namespace WebApplication1.Controllers
 {
 
-
+    
     [Route("api/keys")]
     [ApiController]
-     class KeyvalueController : ControllerBase
+
+    public class KeyvalueController : ControllerBase
     {
             private readonly IDataRepository<Keyvalue> _dataRepository;
             public KeyvalueController (IDataRepository<Keyvalue> dataRepository)

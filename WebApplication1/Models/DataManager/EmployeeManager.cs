@@ -28,16 +28,16 @@ namespace WebApplication1.Models.DataManager
             _keyvalueContext.KeyItems.Add(entity);
             _keyvalueContext.SaveChanges();
         }
-        public void Update(Keyvalue employee, Keyvalue entity)
+        public void Update(Keyvalue Key, Keyvalue entity)
         {
             
-            employee.Value = entity.Value;
+            Key.Value = entity.Value;
 
             _keyvalueContext.SaveChanges();
         }
-        public void Delete(Keyvalue employee)
+        public void Delete(Keyvalue Key)
         {
-            _keyvalueContext.KeyItems.Remove(employee);
+            _keyvalueContext.KeyItems.Remove(Key);
             _keyvalueContext.SaveChanges();
         }
     }
